@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Digital watch
+        </title>
+        <link rel="stylesheet" href="try14.css">
+    </head>
+    <body>
+        <div class="container">
+            <div class="clock">
+                <span id="hrs">00</span>
+                <span>:</span>
+                <span id="mins">00</span>
+                <span>:</span>
+                <span id="secs">00</span>
+        
+            </div>
+        </div>
+
+        <script>
+            let hr = document.getElementById('hrs');
+            let min = document.getElementById('mins');
+            let sec = document.getElementById('secs');
+            setInterval(()=>{
+                let now = new Date();
+                hr.innerHTML = (now.getHours()<10?"0":"") + now.getHours();
+                min.innerHTML = (now.getMinutes()<10?"0":"") + now.getMinutes();
+                sec.innerHTML = (now.getSeconds()<10?"0":"") + now.getSeconds();
+            },1000);
+        </script>
+    
+    </body>
+</html>

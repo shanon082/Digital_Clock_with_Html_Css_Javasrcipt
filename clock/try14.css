@@ -1,0 +1,75 @@
+body{
+    background: linear-gradient(45deg,black,blue);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.container{
+    background-color: blueviolet;
+    height: 120px;
+    width: 65%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    position: relative;
+    backdrop-filter: blur(20px);
+    color: white;
+    font-size: 60px;
+}
+.container::before{
+    background-color: red;
+    height: 80px;
+    content: '';
+    width: 80px;
+    border-radius: 10px;
+    z-index: -1;
+    top: -50px;
+    left: -50px;
+    position: absolute;
+}
+.container::after{
+    background-color: aqua;
+    content: '';
+    height: 80px;
+    width: 80px;
+    position: absolute;
+    border-radius: 50%;
+    right: -30px;
+    bottom: -50px;
+    z-index: -1;
+    position: absolute;
+}
+.clock span{
+    display: inline-block;
+    text-align: center;
+    position: relative;
+    width: 80px;
+
+}
+.clock{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(40px);
+    height: 100%;
+    width: 100%;
+}
+.clock span::after{
+    font-size: 18px;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+}
+#hrs::after{
+    content: 'HOURS';
+}
+#mins::after{
+    content: 'MINUTES';
+}
+#secs::after{
+    content: 'SECONDS';
+}
